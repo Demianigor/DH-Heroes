@@ -3,10 +3,10 @@ const app = express()
 const path = require("path");
 const PORT = 3030 ;
 
-app.use(express.static("public"));
+app.use(express.static("views"));
 
-app.get("/Babbege", function(req, res){
-    res.sendFile(path.join(__dirname,"/views/babbege.html"))
+app.get("/Babbage", function(req, res){
+    res.sendFile(path.join(__dirname,"/views/babbage.html"))
 
 })
 app.get("/berners-lee",function(req, res){
@@ -35,6 +35,15 @@ app.get("/lovelace",function(req, res){
 app.get("/turing", function(req, res){
     res.sendFile(path.join(__dirname,"/views/turing.html"))
 })
+
+app.get("/hopper", function(req, res){
+    res.sendFile(path.join(__dirname,"/views/hopper.html"))
+})
+
+app.get("/home", function(req, res){
+    res.sendFile(path.join(__dirname,"/views/home.html"))
+})
+
 
 
 
